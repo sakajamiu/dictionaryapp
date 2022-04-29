@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import  './App.css'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import RandomWord from './components/RandomWord'
+import Form from './components/Form'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app' >
+      <Navbar/>
+      <Container  >
+        <Row>
+          <Col sm={8}><Form/></Col>
+          <Col sm={4}><RandomWord/></Col>
+        </Row>
+      </Container>
+      <Footer/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

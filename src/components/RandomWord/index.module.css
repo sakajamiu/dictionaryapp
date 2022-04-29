@@ -1,0 +1,27 @@
+.p{
+    color: #7b7e9e;
+    
+}
+.div{
+    text-align: center;
+    margin-top: 25px;
+}
+.card{
+    background-color: #171a5b;
+    text-align: left;
+}
+.cardTitle{
+    color: #f0f1f5;
+}
+.cardSound{
+    color:red;
+}
+.cardSound2{
+    color: #f0f1f5;
+}
+.definition{
+    color:#7b7e9e;
+}
+.h1{
+   color:#171a5b; 
+}

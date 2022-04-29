@@ -1,0 +1,29 @@
+.form{
+    
+    margin: auto;
+    width: 80%;
+}
+.Icon{
+    color:#171a5b;
+    background-color: white;
+    border-color:#7b7e9e ;
+    border-radius: 20px;
+    box-shadow:  0 3px  #7b7e9e;   
+
+}
+.input{
+    border-color:#7b7e9e;
+    border-radius: 20px;
+    box-shadow:  0 3px  #7b7e9e; 
+
+}
+.input:focus{
+    box-shadow: none;
+    border-color: #171a5b;
+}
+
+.div{
+ text-align: center;
+ margin-top: 30px;
+ margin-bottom: 0px;
+}

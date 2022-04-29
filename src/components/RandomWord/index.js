@@ -1,0 +1,1 @@
+export { RandomWord as default } from './randomWord'
