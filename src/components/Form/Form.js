@@ -6,6 +6,7 @@ import styles from './index.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { autoComplete , cleared } from '../../reducer/AutoComplete'
 import { searchWord } from '../../reducer/SearchWord'
+import Word from '../Word'
 
 
 export const SearchForm = () => {
@@ -65,6 +66,7 @@ export const SearchForm = () => {
         </div>
       </Form>
       <Suggestion suggestions={suggestion}/>
+      <Word/>
     </div>
   )
 }

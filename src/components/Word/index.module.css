@@ -1,0 +1,27 @@
+.div{
+    margin-top: 25px;
+}
+.card{
+    background-color: #171a5b;
+    text-align: left;
+}
+.title{
+    color: #f0f1f5;
+    text-transform: capitalize;
+}
+.audioIcon{
+    float : right;
+    background-color:#bc4264 ;
+    color: #f0f1f5;
+    padding: 3px;  
+}
+.text{
+    color :red;
+}
+.IPA{
+    float: right;
+    color: #f0f1f5;
+}
+.cardTitle{
+    padding-bottom: 10px;
+}
