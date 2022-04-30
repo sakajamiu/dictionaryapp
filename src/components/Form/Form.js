@@ -24,7 +24,7 @@ export const SearchForm = () => {
       }
       return(
         <div>
-          <ListGroup>
+          <ListGroup >
             {
               suggestions.map(words =>
                 <ListGroup.Item key ={words.word} action onClick={() => clicked(words.word)}>{words.word} </ListGroup.Item>
