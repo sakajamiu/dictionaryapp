@@ -4,24 +4,30 @@ import { Form, InputGroup, Button, ListGroup } from 'react-bootstrap'
 import { FaSistrix } from 'react-icons/fa'
 import styles from './index.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { autoComplete } from '../../reducer/AutoComplete'
+import { autoComplete , cleared } from '../../reducer/AutoComplete'
+import { searchWord } from '../../reducer/SearchWord'
 
 
 export const SearchForm = () => {
   const [word, setWord] = useState('')
   const dispatch = useDispatch()
   const suggestion = useSelector( state => state.suggestions)
+  const searchedWord = useSelector( state => state.searchedWord )
+  console.log(searchedWord)
   console.log(suggestion)
+
   const predict = ( word ) => {
     setWord(word)
     dispatch(autoComplete(word))
   }
+
   const Suggestion = ({ suggestions }) => {
-    console.log(suggestions)
+
     if(suggestions.length > 0){
       const clicked = (word) => {
         setWord(word)
       }
+
       return(
         <div>
           <ListGroup >
@@ -36,9 +42,17 @@ export const SearchForm = () => {
     }
   }
 
+  const search = (event) => {
+    event.preventDefault()
+    dispatch(cleared())
+    dispatch(searchWord(word))
+    setWord('')
+
+  }
+
   return(
     <div className={styles.form}>
-      <Form >
+      <Form  onSubmit= { search }>
         <div className={styles.div}>
           <InputGroup>
             <Form.Control
