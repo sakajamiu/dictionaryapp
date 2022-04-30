@@ -25,3 +25,18 @@
 .cardTitle{
     padding-bottom: 10px;
 }
+.partOfSpeech{
+    margin-top: 25px;
+    background-color: #fcfcfd;
+    margin-bottom: 25px;
+}
+.definition{
+    text-transform: capitalize;
+    color: #9b9cad;
+}
+
+@media screen and (min-width: 576px){
+    .partOfSpeech:last-child{
+        margin-bottom: 150px;
+    }
+}

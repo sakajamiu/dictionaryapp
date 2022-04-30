@@ -7,15 +7,15 @@ import styles from './index.module.css'
 export const word = () => {
   const searchedWord = useSelector(state => state.searchedWord)
 
-  console.log(searchedWord[0])
-
   if(searchedWord.length === 0){
     return null
   }
+
   const audio = new Audio(`${searchedWord[0].phonetics[0].audio}`)
-  const start = () => {
+  const play = () => {
     audio.play()
   }
+
   return(
     <div className={styles.div}>
       <Card className={styles.card}>
@@ -23,7 +23,7 @@ export const word = () => {
 
           <Card.Title className={styles.cardTitle}>
             <span className={styles.title}>{searchedWord[0].word}</span>
-            <span onClick={start} className={styles.audioIcon}><FaVolumeUp/></span>
+            <span onClick={play} className={styles.audioIcon}><FaVolumeUp/></span>
           </Card.Title>
           <Card.Text>
             <span className={styles.text}>Show IPA</span>
@@ -32,8 +32,23 @@ export const word = () => {
 
         </Card.Body>
       </Card>
-      <Card>
-      </Card>
+      {
+        searchedWord[0].meanings.map(meaning =>
+          <Card key = {meaning.partOfSpeech} className={styles.partOfSpeech}>
+            <Card.Body>
+              <Card.Title className={styles.definition}>{meaning.partOfSpeech}</Card.Title>
+
+              <ol>
+                {
+                  meaning.definitions.map(definition =>
+                    <li key ={definition.definition}>{definition.definition}</li>)
+                }
+              </ol>
+
+            </Card.Body>
+
+          </Card>)
+      }
     </div>
   )
 

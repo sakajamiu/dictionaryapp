@@ -15,7 +15,7 @@ export const Header = () => {
         </Navbar.Brand>
         <Nav className="justify-content-end">
 
-          <Navbar.Brand ><FaGlobeAmericas/> { ' ' } English </Navbar.Brand>
+          <Navbar.Brand  className ={styles.english}><FaGlobeAmericas/> { ' ' } English </Navbar.Brand>
         </Nav>
       </Container>
     </Navbar>

@@ -8,14 +8,16 @@ import Form from './components/Form'
 
 function App() {
   return (
-    <div className='app' >
+    <div >
       <Navbar/>
-      <Container  >
-        <Row>
-          <Col sm={8}><Form/></Col>
-          <Col sm={4}><RandomWord/></Col>
-        </Row>
-      </Container>
+      <div className='app'>
+        <Container  >
+          <Row>
+            <Col sm={8}><Form/></Col>
+            <Col sm={4}><RandomWord/></Col>
+          </Row>
+        </Container>
+      </div>
       <Footer/>
 
     </div>
