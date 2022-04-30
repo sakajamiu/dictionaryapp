@@ -12,9 +12,6 @@ export const SearchForm = () => {
   const [word, setWord] = useState('')
   const dispatch = useDispatch()
   const suggestion = useSelector( state => state.suggestions)
-  const searchedWord = useSelector( state => state.searchedWord )
-  console.log(searchedWord)
-  console.log(suggestion)
 
   const predict = ( word ) => {
     setWord(word)

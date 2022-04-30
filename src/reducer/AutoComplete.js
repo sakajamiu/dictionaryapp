@@ -1,7 +1,6 @@
 import autoCompleteService from '../service/Autocomplete'
 
 export const autoComplete = ( word ) => {
-  console.log(word)
   if(word.length > 0){
     return async dispatch => {
       const suggestion = await autoCompleteService.get(word)

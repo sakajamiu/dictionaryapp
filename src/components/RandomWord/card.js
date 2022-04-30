@@ -21,7 +21,7 @@ const wordCard = ( ) => {
           <Card.Body>
             <Card.Title className={styles.cardTitle}>{word.word}</Card.Title>
             <Card.Text>
-              <span className={styles.cardSound}>pronounciation</span>
+              <span className={styles.cardSound}>Phonetic</span>
               {' '}{' '}
               <span className={styles.cardSound2}>[{word.pronunciation}] </span>
             </Card.Text>
